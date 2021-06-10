@@ -54,10 +54,10 @@ while not game_over:
 
     if answer == 'a':
         if compare(a, b) == True:
-            print("you won")
             score += 1
+            print(f"You'r right! Your current score {score}.")
         else:
-            print("you loose")
+            print(f"You'r wrong! Your current score is {score}.")
             game_over = True
     elif answer == 'b':
         if compare(b, a) == True:
@@ -68,6 +68,5 @@ while not game_over:
             game_over = True
     else:
         print("You choose wrong opption\nGame over!")
-    print(f"your current score {score}.")
     a = b
     b = random.randint(0,49)
